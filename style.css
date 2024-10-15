@@ -10,7 +10,7 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    background: url('/img/cg.jpg') no-repeat center center/cover;
+    background: url('cg.jpg') no-repeat center center/cover;
     background-attachment: fixed;
 }
 
