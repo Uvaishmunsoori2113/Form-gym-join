@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym point Bhaeri</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div class="logo">
+            <img src="/img/logo.jpg" alt="dumble">
+            <div>Baheri fitness point</div>
+        </div>
+        <ul>
+            <li><a href="#" class="active">Home </a></li>
+            <li><a href="#">Abute Us</a></li>
+            <li><a href="#">Fitness</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+        </ul>
+        <div class="right">
+            <button class="btn">Call us now</button>
+            <button class="btn">Join us now</button>
+
+        </div>
+    </div>
+
+    <div class="form-container">
+
+        <form id="gymJoinForm">
+            <h2>Join the baheri Gym</h2>
+            <form action="connect.php" method="post">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Enter your name">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your gmail">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9] {
+                <label for=" dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required placeholder="Enter your Dob">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required placeholder="Enter your gender">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button type="submit">Join Now</button>
+            </form>
+        </form>
+        <p id="formMessage">Hello fitness point baheri 6397205738</p>
+    </div>
+
+
+    <script>
+        document.getElementById('gymJoinForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let fullName = document.getElementById('fullName').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let dob = document.getElementById('dob').value;
+            let gender = document.getElementById('gender').value;
+            let membership = document.getElementById('membership').value;
+            let formMessage = document.getElementById('formMessage');
+
+            // Basic validation
+            if (fullName === '' || email === '' || phone === '' || dob === '' || gender === '' || membership === '') {
+                formMessage.textContent = 'Please fill in all the fields.';
+            } else {
+                formMessage.style.color = 'green';
+                formMessage.textContent = 'Form submitted successfully!';
+
+                // Optionally, you can send the form data to a server here
+                // using AJAX or Fetch API
+
+                // Reset form
+                document.getElementById('gymJoinForm').reset();
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

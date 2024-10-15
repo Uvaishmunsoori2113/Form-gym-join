@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url('/img/cg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+
+/* navbar */
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* background-color: blanchedalmond; */
+
+
+}
+
+/* logo */
+.logo {
+    margin-top: 12px;
+
+    /* filter: invert(100%); */
+}
+
+.logo img {
+    width: 133px;
+    margin-left: 19px;
+
+}
+
+.logo div {
+    text-align: center;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+/* list styling */
+ul {
+    display: flex;
+    background-color: red;
+    margin-left: 8px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul li {
+    list-style: none;
+    padding: 3px 8px;
+    font-size: 18px;
+
+}
+
+li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    text-decoration: underline #fff;
+}
+
+/* button */
+.right {
+    margin-left: 38%;
+
+}
+
+.btn {
+    border: 3px solid #FFF;
+    font-size: 17px;
+
+    margin: 4px 7px;
+
+    padding: 3px 14px;
+
+    border-radius: 18px;
+
+    background-color: black;
+
+    color: #FFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+    color: black;
+}
+
+/* ............................This is form create................... */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 11%;
+    margin-top: 3%;
+    width: 25%;
+    margin-bottom: 5%;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 37px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: cursive;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#formMessage {
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+/* .................forme end................. */
+
+@media only screen and (max-width:700px) {
+    .form-container {
+        margin-top: 10%;
+        width: 73%;
+        margin-left: 37px;
+    }
+}
